@@ -1,5 +1,5 @@
 # /// script
-# requires-python = ">=3.11"
+# requires-python = ">=3.12"
 # dependencies = [
 #     "langgraph",
 #     "langgraph-checkpoint-sqlite",
@@ -13,20 +13,20 @@ import sys
 
 
 @task
-def step_1(input_query):
+async def step_1(input_query):
     """Append bar."""
     return f"{input_query} bar"
 
 
 @task
-def human_feedback(input_query):
+async def human_feedback(input_query):
     """Append user input."""
     feedback = interrupt(f"Please provide feedback: {input_query}")
     return f"{input_query} {feedback}"
 
 
 @task
-def step_3(input_query):
+async def step_3(input_query):
     """Append qux."""
     return f"{input_query} qux"
 
