@@ -2,7 +2,7 @@
 # requires-python = ">=3.12"
 # dependencies = [
 #     "langgraph",
-#     "langgraph-checkpoint-sqlite",
+#     "langgraph-checkpoint-sqlite>=2.0.6",
 # ]
 # ///
 from langgraph.checkpoint.sqlite.aio import AsyncSqliteSaver

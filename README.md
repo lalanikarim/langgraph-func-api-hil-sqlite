@@ -8,7 +8,7 @@ There are 5 scripts in this repository:
 2. :white_check_mark: [hil-func-input.py](hil-func-input.py)
 3. :white_check_mark: [hil-func-input-sqlite.py](hil-func-input-sqlite.py)
 4. :white_check_mark: [hil-func-input-sqlite-sync.py](hil-func-input-sqlite-sync.py)
-5. :no_entry: [hil-func-input-sqlite-async.py](hil-func-input-sqlite-async.py)
+5. :white_check_mark: [hil-func-input-sqlite-async.py](hil-func-input-sqlite-async.py)
 
 # Pre-requisite
 
@@ -65,8 +65,8 @@ uv run hil-func-input-sqlite-sync.py 1 feedback
 5. [hil-func-input-sqlite-async.py](hil-func-input-sqlite-async.py)
 
 Async version of [hil-func-input-sqlite-sync.py] that uses `AsyncSqliteSaver` instead of `SqliteSaver`.  
-This version doesn't seem to behave as expected. The `interrupt` doesn't seem to be recorded in the checkpoint for some reason.  
-This needs further investigation.
+~~This version doesn't seem to behave as expected. The `interrupt` doesn't seem to be recorded in the checkpoint for some reason.  
+This needs further investigation.~~ Fixed in `langgraph-checkpoint-sqlite==2.0.6`.
 
 ```bash
 # first run for prompt
